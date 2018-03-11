@@ -1,50 +1,148 @@
 <div id="calendar-demo">
   <div class="widget-container">
-    <dx-calendar #calendar
-                 id="calendar-container"
-                 [min]="minDateValue"
-                 [max]="maxDateValue"
-                 [disabledDates]="disabledDates"
-                 [firstDayOfWeek]="firstDay"
-                 [disabled]="false"
-                 [(value)]="currentValue"
-                 [zoomLevel]="zoomLevels[0]"
-                 [cellTemplate]="cellTemplate">
-                <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
-                    {{cell.text}}
-                </span>
-    </dx-calendar>
+    <table>
+      <tr>
+        <td class="month">
+          <dx-calendar #month0
+                     id="calendar-container0"
+                     [firstDayOfWeek]="firstDay"
+                     [(value)]="calendar.month0"
+                     [cellTemplate]="cellTemplate">
+                    <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                        {{cell.text}}
+                    </span>
+          </dx-calendar>
+        </td>
+        <td class="month">
+          <dx-calendar #month1
+                       id="calendar-container1"
+                       [firstDayOfWeek]="firstDay"
+                       [(value)]="calendar.month1"
+                       [cellTemplate]="cellTemplate">
+                      <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                          {{cell.text}}
+                      </span>
+          </dx-calendar>
+        </td>
+        <td class="month">
+          <dx-calendar #month2
+                       id="calendar-container2"
+                       [firstDayOfWeek]="firstDay"
+                       [(value)]="calendar.month2"
+                       [cellTemplate]="cellTemplate">
+                      <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                          {{cell.text}}
+                      </span>
+          </dx-calendar>
+        </td>
+        <td class="month">
+          <dx-calendar #month3
+                       id="calendar-container3"
+                       [firstDayOfWeek]="firstDay"
+                       [(value)]="calendar.month3"
+                       [cellTemplate]="cellTemplate">
+                      <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                          {{cell.text}}
+                      </span>
+          </dx-calendar>
+        </td>
+      </tr>
+      <tr>
+        <td class="month">
+          <dx-calendar #month4
+                       id="calendar-container4"
+                       [firstDayOfWeek]="firstDay"
+                       [(value)]="calendar.month4"
+                       [cellTemplate]="cellTemplate">
+                      <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                          {{cell.text}}
+                      </span>
+          </dx-calendar>
+        </td>
+        <td class="month">
+          <dx-calendar #month5
+                       id="calendar-container5"
+                       [firstDayOfWeek]="firstDay"
+                       [(value)]="calendar.month5"
+                       [cellTemplate]="cellTemplate">
+                      <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                          {{cell.text}}
+                      </span>
+          </dx-calendar>
+        </td>
+        <td class="month">
+          <dx-calendar #month6
+                       id="calendar-container6"
+                       [firstDayOfWeek]="firstDay"
+                       [(value)]="calendar.month6"
+                       [cellTemplate]="cellTemplate">
+                      <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                          {{cell.text}}
+                      </span>
+          </dx-calendar>
+        </td>
+        <td class="month">
+          <dx-calendar #month7
+                       id="calendar-container7"
+                       [firstDayOfWeek]="firstDay"
+                       [(value)]="calendar.month7"
+                       [cellTemplate]="cellTemplate">
+                      <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                          {{cell.text}}
+                      </span>
+          </dx-calendar>
+        </td>
+      </tr>
+      <tr>
+        <td class="month">
+          <dx-calendar #month8
+                       id="calendar-container8"
+                       [firstDayOfWeek]="firstDay"
+                       [(value)]="calendar.month8"
+                       [cellTemplate]="cellTemplate">
+                      <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                          {{cell.text}}
+                      </span>
+          </dx-calendar>
+        </td>
+        <td class="month">
+          <dx-calendar #month9
+                       id="calendar-container9"
+                       [firstDayOfWeek]="firstDay"
+                       [(value)]="calendar.month9"
+                       [cellTemplate]="cellTemplate">
+                      <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                          {{cell.text}}
+                      </span>
+          </dx-calendar>
+        </td>
+        <td class="month">
+          <dx-calendar #month10
+                       id="calendar-container10"
+                       [firstDayOfWeek]="firstDay"
+                       [(value)]="calendar.month10"
+                       [cellTemplate]="cellTemplate">
+                      <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                          {{cell.text}}
+                      </span>
+          </dx-calendar>
+        </td>
+        <td class="month">
+          <dx-calendar #month11
+                       id="calendar-container11"
+                       [firstDayOfWeek]="firstDay"
+                       [(value)]="calendar.month11"
+                       [cellTemplate]="cellTemplate">
+                      <span *dxTemplate="let cell of 'custom'" [ngClass]="getCellCssClass(cell.date)">
+                          {{cell.text}}
+                      </span>
+          </dx-calendar>
+        </td>
+      </tr>
+    </table>
   </div>
   <div class="options">
     <div class="caption">Options</div>
-    <div class="option">
-      <dx-check-box
-        text="Specified min value"
-        [value]="false"
-        (onValueChanged)="setMinDate($event)">
-      </dx-check-box>
-    </div>
-    <div class="option">
-      <dx-check-box
-        text="Specified max value"
-        [value]="false"
-        (onValueChanged)="setMaxDate($event)">
-      </dx-check-box>
-    </div>
-    <div class="option">
-      <dx-check-box
-        text="Disable weekend"
-        [value]="false"
-        (onValueChanged)="disableWeekend($event)">
-      </dx-check-box>
-    </div>
-    <div class="option">
-      <dx-check-box
-        text="Monday as the first day of a week"
-        [value]="false"
-        (onValueChanged)="setFirstDay($event)">
-      </dx-check-box>
-    </div>
     <div class="option">
       <dx-check-box
         text="Use the Custom Cell Template"
@@ -53,26 +151,20 @@
       </dx-check-box>
     </div>
     <div class="option">
-      <dx-check-box #calendarDisabled
-                    [(value)]="calendar.disabled"
-                    text="Disabled">
-      </dx-check-box>
-    </div>
-    <div class="option">
-      <span>Zoom level</span>
+      <span style="line-height: 200%;">Selected year</span>
       <dx-select-box
-        id="zoom-level"
-        [dataSource]="zoomLevels"
-        [(value)]="calendar.zoomLevel">
-      </dx-select-box>
-    </div>
-    <div class="option">
-      <span>Selected date</span>
-      <dx-date-box
-        id="selected-date"
+        id="selected-year"
         width="100%"
-        [(value)]="currentValue">
-      </dx-date-box>
+        [dataSource]="years"
+        [(value)]="calendar.currentYear">
+      </dx-select-box>
+      <span style="line-height: 200%;">Selected month</span>
+      <dx-select-box
+        [dataSource]="months"
+        valueExpr="value"
+        displayExpr="name"
+        [(value)]="calendar.currentMonth">
+      </dx-select-box>
     </div>
   </div>
 </div>

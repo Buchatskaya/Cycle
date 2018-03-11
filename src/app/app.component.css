@@ -1,9 +1,11 @@
 /deep/ .widget-container {
-  margin-right: 320px;
-}
-/deep/ #calendar-container {
   margin: auto;
 }
+
+.month {
+  padding: 20px;
+}
+
 /deep/ .dx-calendar-cell:not(.dx-calendar-other-month) .weekend,
 /deep/ .dx-calendar-cell:not(.dx-calendar-other-month) .holyday {
   text-shadow: none;
@@ -28,7 +30,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  width: 260px;
+  width: 350px;
 }
 /deep/ .caption {
   font-weight: 500;

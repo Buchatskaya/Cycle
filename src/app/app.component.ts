@@ -9,6 +9,8 @@ import { DxSelectBoxModule,
   DxCalendarModule,
   DxTemplateModule } from 'devextreme-angular';
 
+import { Calendar } from "./calendar";
+
 if(!/localhost/.test(document.location.host)) {
   enableProdMode();
 }
@@ -20,14 +22,24 @@ if(!/localhost/.test(document.location.host)) {
 })
 
 export class AppComponent {
-  now: Date = new Date();
-  currentValue: Date = new Date();
-  firstDay: number = 0;
-  minDateValue: Date = undefined;
-  maxDateValue: Date = undefined;
-  disabledDates: Function = null;
-  zoomLevels: string[] = [
-    "month", "year", "decade", "century"
+  calendar: Calendar = new Calendar();
+  firstDay: number = 1;
+  years: number[] = [
+    2017, 2018, 2019
+  ];
+  months =  [
+    { name: "January", value: 0 },
+    { name: "February", value: 1 },
+    { name: "March", value: 2 },
+    { name: "April", value: 3 },
+    { name: "May", value: 4 },
+    { name: "June", value: 5 },
+    { name: "July", value: 6 },
+    { name: "August", value: 7 },
+    { name: "September", value: 8 },
+    { name: "October", value: 9 },
+    { name: "November", value: 10 },
+    { name: "December", value: 11 },
   ];
   cellTemplate = "cell";
   holydays: any = [[1,0], [4,6], [25,11]];
@@ -36,37 +48,7 @@ export class AppComponent {
 
     return day === 0 || day === 6;
   }
-  setMinDate(e) {
-    if(e.value) {
-      this.minDateValue = new Date(this.now.getTime() - 1000*60*60*24*3);
-    } else {
-      this.minDateValue = undefined;
-    }
-  }
-  setMaxDate(e) {
-    if(e.value) {
-      this.maxDateValue = new Date(this.now.getTime() + 1000*60*60*24*3);
-    } else {
-      this.maxDateValue = undefined;
-    }
-  }
-  disableWeekend(e) {
-    if(e.value) {
-      var that = this;
-      that.disabledDates = function(data) {
-        return data.view === "month" && that.isWeekend(data.date);
-      };
-    } else {
-      this.disabledDates = undefined;
-    }
-  }
-  setFirstDay(e) {
-    if(e.value) {
-      this.firstDay = 1;
-    } else {
-      this.firstDay = 0;
-    }
-  }
+
   useCellTemplate(e) {
     if(e.value) {
       this.cellTemplate = "custom";
