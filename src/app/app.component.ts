@@ -80,7 +80,7 @@ export class AppComponent {
     DxCalendarModule,
     DxCheckBoxModule,
     DxDateBoxModule,
-    DxTemplateModule
+    DxTemplateModule,
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
