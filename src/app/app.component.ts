@@ -1,13 +1,14 @@
 import {Component} from '@angular/core';
-import {BootstrapYearCalendar} from "ngx-bootstrap-year-calendar";
+import {BootstrapYearCalendarModel} from 'ngx-bootstrap-year-calendar/src/app/model/bootstrap-year-calendar';
 
 @Component({
-  selector: 'app',
+  selector: 'app-root',
   templateUrl: 'app.component.html'
 })
+
 export class AppComponent {
 
-  private bootstrapYearCalendarOptions: BootstrapYearCalendar = {
+  public bootstrapYearCalendarOptions: BootstrapYearCalendarModel = {
     dataSource: [
       {
         id: 1,
@@ -27,5 +28,14 @@ export class AppComponent {
       }
     ],
   };
+
+  onClickDay($event: any) {
+  }
+
+  onDayContextMenu($event: any) {
+  }
+
+  onSelectRange($event: any) {
+  }
 
 }
