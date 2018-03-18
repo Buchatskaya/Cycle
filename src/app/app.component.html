@@ -1,4 +1,5 @@
-<label>Введите имя:</label>
-<input [(ngModel)]="name" placeholder="name">
-<h1>Добро пожаловать, {{name}}!</h1>
-
+<app-bootstrap-year-calendar
+  [options]="bootstrapYearCalendarOptions"
+  (clickDay)="onClickDay($event)"
+  (dayContextMenu)="onDayContextMenu($event)"
+  (selectRange)="onSelectRange($event)"></app-bootstrap-year-calendar>

@@ -1,13 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
-import { AppComponent } from './app.component';
-
+import { NgModule } from "@angular/core";
+import { BrowserModule} from "@angular/platform-browser";
+import { HttpModule } from "@angular/http";
+import { AppComponent } from "./app.component";
+import { BootstrapYearCalendarModule } from "ngx-bootstrap-year-calendar";
 
 @NgModule({
-  declarations: [ AppComponent ],
-  imports: [ BrowserModule, FormsModule ],
-  providers: [],
+  imports: [BrowserModule, HttpModule, BootstrapYearCalendarModule],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
