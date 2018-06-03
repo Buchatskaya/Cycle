@@ -1,5 +1,5 @@
 export class GetCalendarResponse {
-  readonly yearMonthField = '_yearMonth';
+  readonly yearMonthField = 'yearMonth';
 
   private _yearMonth: object;
   private _monthIndexes: string[];
